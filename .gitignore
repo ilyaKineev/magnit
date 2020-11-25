@@ -2,7 +2,8 @@
 out
 target
 *.iml
-log
+src/main/log
 *.patch
+*.txt.*
 
 

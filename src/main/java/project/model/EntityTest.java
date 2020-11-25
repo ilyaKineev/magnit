@@ -17,7 +17,7 @@ public class EntityTest {
     }
 
     public EntityTest(int n) {
-        this.field =n;
+        this.field = n;
     }
 
     public void setId(int id) {

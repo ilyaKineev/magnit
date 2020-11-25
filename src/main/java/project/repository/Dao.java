@@ -2,8 +2,8 @@ package project.repository;
 
 import org.hibernate.Session;
 import org.hibernate.Transaction;
-import project.util.HibernateSessionFactoryUtil;
 import project.model.EntityTest;
+import project.util.HibernateSessionFactoryUtil;
 
 import java.util.List;
 
@@ -38,7 +38,7 @@ public class Dao {
     }
 
     public List<EntityTest> findAll() {
-        List<EntityTest> test = (List<EntityTest>)HibernateSessionFactoryUtil
+        List<EntityTest> test = (List<EntityTest>) HibernateSessionFactoryUtil
                 .getSessionFactory().openSession().createQuery("From EntityTest").list();
         return test;
     }
@@ -46,6 +46,7 @@ public class Dao {
     public int countRows() {
         return findAll().size();
     }
+
 
     public void deleteAll() {
         Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
